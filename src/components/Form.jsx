@@ -23,6 +23,7 @@ const Form = ({
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
 
@@ -109,7 +110,7 @@ const Form = ({
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
-                for="email"
+                htmlFor="email"
                 className="block text-sm font-medium text-gray-700"
               >
                 Correo electrónico
@@ -140,7 +141,7 @@ const Form = ({
 
             <div>
               <label
-                for="password"
+                htmlFor="password"
                 className="block text-sm font-medium text-gray-700"
               >
                 Contraseña
@@ -152,7 +153,7 @@ const Form = ({
                 <input
                   id="password"
                   name="password"
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   required=""
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -166,9 +167,10 @@ const Form = ({
                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
                   <button
                     type="button"
+                    onClick={() => setShowPassword(!showPassword)}
                     className="text-gray-400 hover:text-gray-500 focus:outline-none"
                   >
-                    <i className="fas fa-eye"></i>
+                    <i className={`fas ${showPassword ? 'fa-eye-slash' : 'fa-eye'}`}></i>
                   </button>
                 </div>
               </div>
