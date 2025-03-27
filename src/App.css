@@ -1,4 +1,7 @@
 @import "tailwindcss";
+.gradient{
+  background: linear-gradient(to right, #4f46e5, #9333ea);
+}
 
 .text-gradient {
   background: linear-gradient(to right, #4f46e5, #9333ea); /* Degradado personalizado */
@@ -7,7 +10,7 @@
 }
 
 .button-gradient {
-  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  background: linear-gradient(to right, #4f46e5, #9333ea);
   color: white;
   border: none;
   border-radius: 8px; /* Puedes ajustar según el diseño */
