@@ -1,8 +1,7 @@
 import "../App.css";
 import logo from "../assets/logoApp.svg";
 
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 import {

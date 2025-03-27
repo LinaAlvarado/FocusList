@@ -1,10 +1,10 @@
 import { 
     getAuth, 
-    signInWithPopup, 
     GoogleAuthProvider, 
     createUserWithEmailAndPassword, 
     signInWithEmailAndPassword, 
-    signOut 
+    signOut, 
+    signInWithPopup
   } from "firebase/auth";
   import { app } from "../../firebaseConfig";
 
@@ -19,10 +19,10 @@ export const registerWithEmail = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  export const loginWithEmail = (email, password) => {
+export const loginWithEmail = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  export const logout = () => {
+export const logout = () => {
     return signOut(auth);
   };
